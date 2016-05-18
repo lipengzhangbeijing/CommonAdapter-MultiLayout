@@ -48,6 +48,11 @@ public class MainActivity extends ActionBarActivity {
 		};
 		adapter.setMultiItemTypeSupportListener(new MultiItemTypeSupportListener() {
 
+			/**
+			 * 设置convertView的type类型
+			 * @param position
+			 * @return
+			 */
 			@Override
 			public int getItemViewType(int position) {
 				// TODO Auto-generated method stub
@@ -61,11 +66,20 @@ public class MainActivity extends ActionBarActivity {
 				
 			}
 
+			/**
+			 * 设置convertView的type数量
+			 * @return
+			 */
 			@Override
 			public int getViewTypeCount() {
 				return 3;
 			}
 
+			/**
+			 * 设置不同位置convertView的布局文件
+			 * @param position
+			 * @return
+			 */
 			@Override
 			public int getLayoutId(int position) {
 				if (position % 3 == 0) {
